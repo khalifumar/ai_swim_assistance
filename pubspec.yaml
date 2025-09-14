@@ -52,6 +52,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -67,7 +68,8 @@ flutter:
     - .env
     - assets/data/ai_tapper_v2.csv
     - assets/data/ai_motion_v2.csv
-    
+    - assets/images/bg_pool.jpg
+    - assets/brand/ai_swim_logo.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -98,3 +100,28 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_native_splash:
+  # Warna latar default (mode terang)
+  color: "#ffffff"
+  # Gambar logo utama (akan di-center)
+  image: assets/brand/ai_swim_logo.png
+
+  # Mode gelap (opsional)
+  color_dark: "#0F172A"         # biru navy/gelap
+  image_dark: assets/brand/ai_swim_logo.png
+
+  # Android 12 memerlukan ikon branding terpisah
+  android_12:
+    image: assets/brand/ai_swim_logo.png
+    color: "#ffffff"
+    image_dark: assets/brand/ai_swim_logo.png
+    color_dark: "#0F172A"
+
+  # (Opsional) background gambar penuh jika ingin pola atau gradien
+  # background_image: assets/brand/splash_bg.png
+  # background_image_dark: assets/brand/splash_bg_dark.png
+
+  # (Opsional) branding kecil di bawah (mis. teks kecil)
+  # branding: assets/brand/branding_small.png
+  # branding_dark: assets/brand/branding_small_dark.png
